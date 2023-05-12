@@ -19,41 +19,15 @@
 
         <div class="card card-body">
           <form method="POST" action="">
-            {% for message in messages %}
-                <p id="messages">{{message}}</p>
-            {% endfor %}
 
             {% csrf_token %}
 
             <div class="col-md-8" style="margin: 0 auto;display: block;">
               
               <div class="col-11">
-                {{form.name|as_crispy_field}}
+                {{form | crispy}}
               </div>
-              <div class="col-11">
-                {{form.gender|as_crispy_field}}
-              </div>	
-              <div class="col-11">
-                {{form.gender|as_crispy_field}}
-              </div>
-              <div class="col-11">
-                {{form.post|as_crispy_field}}
-                </div>
-              <div class="col-11">
-                {{form.bio|as_crispy_field}}
-              </div>
-              <div class="col-11">
-                  {{ form.gender|as_crispy_field }}
-              </div>
-              <div class="col-11">
-                {{form.profile_pic|as_crispy_field}}
-              </div>
-              <div class="col-11">
-                {{form.email|as_crispy_field}}
-              </div>
-              <div class="col-11">
-              {{ form.phone_number|as_crispy_field }}
-              </div>
+              
             </div>
             <br>
             <div class="col-md-12 text-center">
