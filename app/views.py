@@ -45,8 +45,8 @@ def post_view(request):
 
     context = {
         'post':post,
-        'data_names':data_names,
-        'data_values':data_values,
+        # 'data_names':data_names,
+        # 'data_values':data_values,
 
         }
     return render(request,'post_view.html',context)
